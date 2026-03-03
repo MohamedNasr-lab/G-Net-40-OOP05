@@ -10,6 +10,15 @@ namespace qq
     {
         static void Main(string[] args)
         {
+            #region Part 1
+
+            #region Q1
+            //We use interfaces to achieve loose coupling, 
+            //improve testability, support dependency injection,
+            //and follow SOLID principles.
+            #endregion
+
+            #endregion
         }
     }
 }
