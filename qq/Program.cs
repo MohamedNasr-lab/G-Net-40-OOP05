@@ -18,6 +18,17 @@ namespace qq
             //and follow SOLID principles.
             #endregion
 
+            #region Q2
+            //a) The problem is that both interfaces contain a method called Greet(),
+            //so the class provides one implementation that is used for both interfaces.
+
+            //b) This can be fixed using Explicit Interface Implementation,
+            //allowing each interface method to have a different implementation.
+
+            //c)No, translator.Greet() cannot be called directly.
+            //The method must be called through the interface reference like((IEnglishSpeaker) translator).Greet().
+            #endregion
+
             #endregion
         }
     }
