@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace qq
 {
@@ -39,7 +40,15 @@ namespace qq
 
             //The risk of shallow copy is that changes to reference-type fields in one object will affect the other object since they share the same referenced objects.
             #endregion
+
+            #region Q4
+            //Dev - Testing
+            //QA - Testing
+
+            //MemberwiseClone() performs a shallow copy, meaning value types are copied but reference types share the same object.
+            //Title changes only for e2, but Dept is shared between e1 and e2, so changing Dept.Name affects both objects.
             #endregion
+                #endregion
         }
     }
 }
