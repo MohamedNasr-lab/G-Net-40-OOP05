@@ -48,7 +48,40 @@ namespace qq
             //MemberwiseClone() performs a shallow copy, meaning value types are copied but reference types share the same object.
             //Title changes only for e2, but Dept is shared between e1 and e2, so changing Dept.Name affects both objects.
             #endregion
-                #endregion
+            #endregion
+
+            #region Part 2
+            Cinema cinema = new Cinema("EGYPT CINEMA");
+            cinema.OpenCinema();
+
+            StandardTicket standardTicket = new StandardTicket("Lion King", 300, "A10");
+            VIPTicket vIPTicket = new VIPTicket("Lion King", 300, true);
+            IMAXTicket iMAXTicket = new IMAXTicket("Lion King", 300, true);
+
+            cinema.AddTicket(standardTicket);
+            cinema.AddTicket(vIPTicket);
+            cinema.AddTicket(iMAXTicket);
+
+            Console.WriteLine("========== All Tickets ==========");
+            cinema.PrintAllTickets();
+
+            VIPTicket v = (VIPTicket)vIPTicket.Clone();
+  
+            v.MovieName = "Batman";
+
+            Console.WriteLine("Clone Test");
+
+            Console.WriteLine("Original: ");
+            vIPTicket.Print();
+
+            Console.WriteLine("Clone: ");
+            v.Print();
+
+            standardTicket.CancelTicket();
+            standardTicket.Print();
+
+            cinema.CloseCinema();
+            #endregion
         }
     }
 }

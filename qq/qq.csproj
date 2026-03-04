@@ -43,11 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrintTicket.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="TicketType.cs" />
+    <Compile Include="Seat.cs" />
+    <Compile Include="StandardTicket.cs" />
+    <Compile Include="VIPTicket.cs" />
+    <Compile Include="IMAXTicket.cs" />
+    <Compile Include="Cinema.cs" />
+    <Compile Include="Projector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
